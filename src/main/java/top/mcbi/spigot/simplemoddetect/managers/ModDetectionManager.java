@@ -24,6 +24,10 @@ public class ModDetectionManager {
     public void handleDetectedMods(Player player, List<String> mods) {
         playerMods.put(player.getName(), mods);
 
+        if (player.hasPermission("simplemoddetect.bypass")) {
+            return;
+        }
+
         List<String> violatingMods = modChecker.checkMods(mods);
 
         if (!violatingMods.isEmpty()) {

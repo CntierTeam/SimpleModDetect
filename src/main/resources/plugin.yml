@@ -15,3 +15,6 @@ permissions:
   simplemoddetect.reload:
     description: 允许重新加载 SimpleModDetect 配置
     default: op
+  simplemoddetect.bypass:
+    description: 拥有此权限的玩家不检查模组
+    default: false
